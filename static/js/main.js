@@ -11,11 +11,10 @@ function iniciarSesion() {
     xhr.send(data);
 
     if (xhr.status == 200){
-      let respuesta = JSON.parse(xhr.responseText);
-      alert(respuesta.mensaje);
+      pass
 
     } else{
-      let respuesta = JSON.parse(xhr.responseText);
+      let respuesta = xhr.responseText;
       alert("Error: "+respuesta.mensaje);
     }
   } else {
