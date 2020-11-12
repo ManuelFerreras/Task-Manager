@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css')}}">
+</head>
+<body>
+    <h1>Registrar Cuenta</h1>
+    
+    <div class="contenedor">
+        <div class="contenedor-formulario centrar-texto pb-50">
+            <form class="formulario-css" name="formulario" id="formulario">
+
+                <label for="mail">Email:</label>
+                <br>
+                <input type="text" name="mail" id="mail"/>
+                <br>  
+
+                <label for="contrasena">Contraseña:</label>
+                <br>
+                <input type="password" name="contrasena" id="pass"/>
+                <br>
+
+                <a href="javascript:registrarCuenta()">
+                    <div class="boton">Registrar Cuenta</div>
+                </a>
+
+                <p>ó</p>
+                <a href="/login">
+                    <div class="boton">Volver a Login</div>
+                </a>
+        
+            </form>
+  
+        </div>
+
+        <a href="/">
+            <div class="boton-rojo">Salir</div>
+        </a>
+    </div>
+
+    <script type=text/javascript src="{{url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

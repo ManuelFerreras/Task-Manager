@@ -1,0 +1,188 @@
+/* Globales */
+body {
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Utilidad */
+
+.centrar-texto {
+    width: 100%;
+    text-align: center;
+}
+
+.pb-50 {
+    padding-bottom: 50px;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#E73C7E, #23D5AB);
+    border-radius: 6px;
+}
+
+/* Color */
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    color: #FFF;
+}
+
+.botones {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: auto 0;
+}
+
+.botones a {
+    width: 150px;
+    text-align: center;
+}
+
+@keyframes change {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+/* Contenedores */
+
+.contenedor {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.contenedor-formulario {
+    width: 300px;
+    height: auto;
+    
+    border-style: solid;
+}
+
+
+/* Formulario */
+
+.formulario-css {
+    padding: 50px;
+    padding-bottom: 0px;
+}
+
+.formulario-css input {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.formulario-css input:last-child {
+    margin-bottom: 0px;
+}
+
+input[type=submit] {
+    border-radius: 7px;
+    transition: 0.25s;
+}
+
+input[type=submit]:active {
+    background-color: #000000;
+    box-shadow: 0 5px #666;
+    color: white;
+    transform: translateY(4px);
+}
+
+input[type=submit]:hover {
+    background-color: #000000;
+    color: white;
+}
+
+/* Botones */
+.boton{
+    transition: 0.25s;
+    color: black;
+    padding: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+.boton:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.boton:active {
+    background-color: #000000;
+    box-shadow: 0 5px #666;
+    color: white;
+    transform: translateY(4px);
+}
+
+.boton-rojo {
+    margin-top: 25px;
+    transition: 0.25s;
+    color: black;
+    background-color: red;
+    padding: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 0.8px;
+    width: 60px;
+    text-align: center;
+}
+
+
+.boton-rojo:active {
+    box-shadow: 0 5px #666;
+    color: white;
+    transform: translateY(4px);
+}
+
+.boton-index{
+    transition: 0.25s;
+    color: black;
+    font-size: 26px;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+.boton-index:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.boton-index:active {
+    background-color: #000000;
+    box-shadow: 0 5px #666;
+    color: white;
+    transform: translateY(4px);
+}
+
+a{
+    text-decoration: none;
+}
