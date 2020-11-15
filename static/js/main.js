@@ -10,12 +10,12 @@ function iniciarSesion() {
     xhr.open("post", "/loginForm", false)
     xhr.send(data);
 
-    if (xhr.status == 200){
-      pass
-
-    } else{
-      let respuesta = xhr.responseText;
-      alert("Error: "+respuesta.mensaje);
+    if(xhr.status == 401){
+      let respuesta = JSON.parse(xhr.responseText);
+      alert("Error: " + respuesta.mensaje);
+    } else if(xhr.status == 200){
+      let respuesta = JSON.parse(xhr.responseText);
+      alert(respuesta.mensaje);
     }
   } else {
     alert('Complete los campos correctamente.')
@@ -34,13 +34,12 @@ function registrarCuenta() {
     xhr.open("post", "/registerForm", false)
     xhr.send(data);
 
-    if (xhr.status == 200){
-      let respuesta = JSON.parse(xhr.responseText);
-      alert(respuesta.mensaje);
-
-    } else if(xhr.status == 409){
+    if(xhr.status == 409){
       let respuesta = JSON.parse(xhr.responseText);
       alert("Error: " + respuesta.mensaje);
+    } else if(xhr.status == 200){
+      let respuesta = JSON.parse(xhr.responseText);
+      alert(respuesta.mensaje);
     } 
   } else {
     alert('Complete los campos correctamente.')
